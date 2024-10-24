@@ -10,14 +10,6 @@
     overflow: hidden;
     position: relative;
     &-block{
-        position: relative; // This allows it to sit above the background
-        z-index: 1; // Ensure this content is above the background
-        color: white; // Make sure the text is readable
-        font-size: 2rem; // Adjust font size as needed
-        text-align: center; // Center the text
-        display: flex; // Use flexbox for centering
-        justify-content: center; // Center horizontally
-        align-items: center; // Center vertically
-        height: 100%; // Full height to center vertically
+
     }
 }
