@@ -1,9 +1,12 @@
 import React from 'react'
-import style from './main.module.scss'
+import './main.scss'
+
 function Main() {
   return (
-    <div className={style.main}>
-      hello
+    <div className="main">
+        <div className="main-block">
+            HOLA 
+        </div>
     </div>
   )
 }
