@@ -1,6 +1,6 @@
 @import '../../styles/colors.scss';
 
-.main{
+.main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,32 +9,52 @@
     padding: 0 15px;
     overflow: hidden;
     position: relative;
-    &-block{
-        max-width: 500px;
-        display: flex;
+    background-color: $text-gradient;
+    &-block {
+        max-width: 500px; /* Максимальная ширина блока */
+        display: inline-block;
         flex-direction: column;
-        
-        &__title{
-            width: 100%;
+        align-items: center; /* Центрируем содержимое внутри блока */
+
+        &__title {
+            font-weight: 900;
             font-size: 57px;
+            // display: inline-block; /* Ширина будет зависеть от содержимого */
+            // text-align: center; /* Центрируем текст */
+            margin: 0; /* Убираем отступы */
         }
-        &__img{}
-        &__subtitle{
+
+        &__img {}
+
+        &__subtitle {
             font-size: 16px;
             text-align: justify;
         }
-        &__links{
+
+        &__links {
             display: flex;
             flex-direction: column;
             padding: 15px 0;
             text-decoration: none;
-            &-btn{
+            width: 100%; /* Занимает всю ширину блока */
+
+            &-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $hover;
+                cursor: pointer;
                 height: 50px;
-                background-color: $hover;
+                background-color: $text-main;
                 border-radius: 15px;
                 margin-bottom: 15px;
+                width: 100%; /* Занимает всю ширину родительского блока */
+            }
+
+            &-btn:hover {
+                color: $text-main;
+                background-color: $hover;
             }
         }
     }
-
 }
