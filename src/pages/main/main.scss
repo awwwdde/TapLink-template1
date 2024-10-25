@@ -11,6 +11,30 @@
     position: relative;
     &-block{
         max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        
+        &__title{
+            width: 100%;
+            font-size: 57px;
+        }
+        &__img{}
+        &__subtitle{
+            font-size: 16px;
+            text-align: justify;
+        }
+        &__links{
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+            text-decoration: none;
+            &-btn{
+                height: 50px;
+                background-color: $hover;
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+        }
     }
 
 }
