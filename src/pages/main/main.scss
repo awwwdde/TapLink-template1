@@ -10,6 +10,27 @@
     overflow: hidden;
     position: relative;
     &-block{
-
+        z-index: 9999;
+        background: pink;
+        max-width: 500px;
+        &__title{
+            font-size: 96px;
+        }
+        &__pic{
+            &-img{}
+        }
+        &-descr{
+            &_text{
+                font-size: 24px;
+                text-align: justify;
+            }
+        }
+        &-btns{
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-around;
+            &__buts{}
+        }
     }
+
 }
