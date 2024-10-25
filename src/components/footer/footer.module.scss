@@ -1,0 +1,34 @@
+// footer.module.scss
+@import '../../styles/colors.scss';
+.footer {
+    position: absolute;
+    bottom: 0; /* Прикрепляем футер к нижней части */
+    left: 0; /* Устанавливаем футер на всю ширину */
+    padding: 10px 0; /* Вертикальные отступы */
+    display: flex;
+    justify-content: center; /* Центрируем содержимое футера */
+    padding: 20px; /* Добавляем отступы */
+}
+
+.footerBlock {
+    display: flex;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+}
+
+.footerBlockImage img {
+    width: 30px;
+    margin-right: 8px; /* Отступ между логотипом и текстом */
+}
+
+.footerText {
+    color: $text-main;
+    font-size: 16px; /* Размер текста */
+}
+.footerLink{
+    color: $text-main;
+    font-size: 16px; /* Размер текста */
+}
+.footerLink:hover{
+    color: $hover;
+    font-size: 16px; /* Размер текста */
+}
