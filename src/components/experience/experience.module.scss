@@ -1,0 +1,27 @@
+@import '../../styles/colors.scss';
+.experience{
+    display: grid; // Используем grid для контейнера
+    grid-template-columns: repeat(3, 1fr); // 3 колонки одинаковой ширины
+    gap: 5px; // Отступ между элементами
+    &Item{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        &Image{
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 15px;
+        }
+        &Block{
+
+            padding-top: 5px;
+            justify-content: center;
+            &Title{
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+        
+
+    }
+}
