@@ -1,5 +1,6 @@
 
 
+
 import Main from './pages/main/Main';
 import './styles/styles.scss';
 function App() {

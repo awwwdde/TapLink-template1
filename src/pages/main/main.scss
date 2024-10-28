@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 
 .main {
+    max-width: 700px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,52 +10,23 @@
     padding: 0 15px;
     overflow: hidden;
     position: relative;
-    background-color: $text-gradient;
+    background: $text-gradient;
+    border-radius: 0 25px 25px 0;
     &-block {
         max-width: 500px; /* Максимальная ширина блока */
         display: inline-block;
         flex-direction: column;
         align-items: center; /* Центрируем содержимое внутри блока */
-
-        &__title {
-            font-weight: 900;
-            font-size: 57px;
-            // display: inline-block; /* Ширина будет зависеть от содержимого */
-            // text-align: center; /* Центрируем текст */
-            margin: 0; /* Убираем отступы */
+        &__title{
+            font-size: 48px;
+            font-weight: 800;
         }
-
-        &__img {}
-
-        &__subtitle {
-            font-size: 16px;
+        &__about{
+            font-size: 18px;
             text-align: justify;
         }
-
-        &__links {
-            display: flex;
-            flex-direction: column;
-            padding: 15px 0;
-            text-decoration: none;
-            width: 100%; /* Занимает всю ширину блока */
-
-            &-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $hover;
-                cursor: pointer;
-                height: 50px;
-                background-color: $text-main;
-                border-radius: 15px;
-                margin-bottom: 15px;
-                width: 100%; /* Занимает всю ширину родительского блока */
-            }
-
-            &-btn:hover {
-                color: $text-main;
-                background-color: $hover;
-            }
-        }
+        &__exp{}
+        &__work{}
+        &__contact{}
     }
 }
