@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+.work{
+    display: grid; // Используем grid для контейнера
+    grid-template-columns: repeat(3, 1fr); // 3 колонки одинаковой ширины
+    gap: 5px; // Отступ между элементами
+    &Item{
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        backdrop-filter: blur(30px);
+        background: rgba(48, 48, 48, 0.143);
+        &F{
+            display: flex;
+            flex-direction: row;
+            &Title{
+                margin-left: 5px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        &S{
+            display: flex;
+            flex-direction: row;
+            &Date{
+                font-size: 16px;
+                font-weight: 200;
+                color: $text-addon;
+            }
+            &Position{
+                margin-left: 5px;
+                font-size: 16px;
+                font-weight: 600;
+                color: $text-addon;
+            }
+        }
+    }
+}
