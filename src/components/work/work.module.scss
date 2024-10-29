@@ -1,36 +1,95 @@
 @import '../../styles/colors.scss';
-.work{
+
+.work {
     display: grid; // Используем grid для контейнера
     grid-template-columns: repeat(3, 1fr); // 3 колонки одинаковой ширины
     gap: 5px; // Отступ между элементами
-    &Item{
+
+    &Item {
         margin-top: 10px;
         cursor: pointer;
         border-radius: 5px;
         backdrop-filter: blur(30px);
         background: rgba(48, 48, 48, 0.143);
-        &F{
+        padding: 10px; // Добавляем отступы для элементов
+
+        &F {
             display: flex;
             flex-direction: row;
-            &Title{
+
+            &Title {
                 margin-left: 5px;
                 font-size: 18px;
                 font-weight: 600;
             }
         }
-        &S{
+
+        &S {
             display: flex;
             flex-direction: row;
-            &Date{
+
+            &Date {
                 font-size: 16px;
                 font-weight: 200;
                 color: $text-addon;
             }
-            &Position{
+
+            &Position {
                 margin-left: 5px;
                 font-size: 16px;
                 font-weight: 600;
                 color: $text-addon;
+            }
+        }
+    }
+}
+
+// Медиа-запросы для мобильных устройств
+@media (max-width: 768px) {
+    .work {
+        grid-template-columns: repeat(2, 1fr); // 2 колонки на мобильных устройствах
+
+        &Item {
+            &F {
+                &Title {
+                    font-size: 16px; // Уменьшаем размер шрифта заголовка
+                }
+            }
+
+            &S {
+                &Date {
+                    font-size: 14px; // Уменьшаем размер шрифта даты
+                }
+
+                &Position {
+                    font-size: 14px; // Уменьшаем размер шрифта позиции
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .work {
+        grid-template-columns: 2fr; // 1 колонка на очень маленьких экранах
+
+        &Item {
+            padding: 8px; // Уменьшаем отступы для маленьких экранов
+
+            &F {
+                &Title {
+                    font-size: 14px; // Уменьшаем размер шрифта заголовка для маленьких экранов
+                }
+            }
+
+            &S {
+                &Date {
+                    font-size: 12px; // Уменьшаем размер шрифта даты для маленьких экранов
+                }
+
+                &Position {
+                    font-size: 12px; // Уменьшаем размер шрифта позиции для маленьких экранов
+                }
             }
         }
     }

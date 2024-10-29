@@ -1,25 +1,24 @@
 @import '../../styles/colors.scss';
-@import '~slick-carousel/slick/slick.css';
-@import '~slick-carousel/slick/slick-theme.css';
 
 .main {
-    max-width: 700px;
-    min-height: 100vh;
+    width: 100%; // Занимает всю ширину страницы
+    min-height: 100vh; // Высота блока
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0 15px;
-    overflow: hidden;
-    position: relative;
+    justify-content: flex-start; // Начинаем с самого верха
+    padding: 15px; // Отступы по бокам
+    overflow-y: auto; // Добавляем вертикальную прокрутку
     background: $text-gradient;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
+    margin: 0 auto; // Центрируем блок по горизонтали
+    max-width: 700px; // Максимальная ширина блока
 
     &-block {
-        max-width: 500px;
-        display: inline-block;
+        max-width: 500px; // Максимальная ширина внутреннего блока
+        display: flex; // Изменено на flex для центрирования
         flex-direction: column;
-        align-items: center; 
+        align-items: flex-start; // Выровнять компоненты блока по левому краю
 
         &__title {
             font-size: 48px;
@@ -53,7 +52,9 @@
         }
 
         &__contact {
+            padding: 30px 0;
             &-list {
+                margin-top: 10px;
                 display: grid; // Используем grid для контейнера
                 grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
                 gap: 5px; // Отступ между элементами
@@ -87,7 +88,8 @@
 
             &__contact {
                 &-list {
-                    grid-template-columns: repeat(4, 1fr); // 2 колонки на мобильных устройствах
+                    grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
+                    gap: 5px; // Отступ между элементами // 2 колонки на мобильных устройствах
                 }
             }
         }
@@ -97,6 +99,8 @@
 @media (max-width: 480px) {
     .main {
         &-block {
+            padding: 10px; // Добавляем отступы для маленьких экранов
+
             &__title {
                 font-size: 28px; // Уменьшаем размер шрифта заголовка для маленьких экранов
             }
@@ -110,7 +114,9 @@
 
             &__contact {
                 &-list {
-                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
+                    gap: 5px; // 1 колонка на очень маленьких экранах
+                    margin-bottom: 15px;
                 }
             }
         }

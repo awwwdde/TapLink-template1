@@ -1,27 +1,70 @@
 @import '../../styles/colors.scss';
-.experience{
+
+.experience {
     display: grid; // Используем grid для контейнера
     grid-template-columns: repeat(3, 1fr); // 3 колонки одинаковой ширины
     gap: 5px; // Отступ между элементами
-    &Item{
+
+    &Item {
         display: flex;
         flex-direction: row;
         margin-top: 10px;
-        &Image{
+
+        &Image {
             max-width: 150px;
             max-height: 150px;
             border-radius: 15px;
         }
-        &Block{
 
+        &Block {
             padding-top: 5px;
             justify-content: center;
-            &Title{
+            display: flex; // Добавляем flex для центрирования содержимого
+            flex-direction: column; // Выравниваем содержимое по вертикали
+
+            &Title {
                 font-size: 18px;
                 font-weight: 300;
             }
         }
-        
+    }
+}
 
+// Медиа-запросы для мобильных устройств
+@media (max-width: 768px) {
+    .experience {
+        grid-template-columns: repeat(2, 1fr); // 2 колонки на мобильных устройствах
+
+        &Item {
+            &Image {
+                max-width: 120px; // Уменьшаем размер изображения
+                max-height: 120px; // Уменьшаем размер изображения
+            }
+
+            &Block {
+                &Title {
+                    font-size: 16px; // Уменьшаем размер шрифта заголовка
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        grid-template-columns: 1fr; // 1 колонка на очень маленьких экранах
+
+        &Item {
+            &Image {
+                max-width: 100px; // Уменьшаем размер изображения
+                max-height: 100px; // Уменьшаем размер изображения
+            }
+
+            &Block {
+                &Title {
+                    font-size: 14px; // Уменьшаем размер шрифта заголовка для маленьких экранов
+                }
+            }
+        }
     }
 }
