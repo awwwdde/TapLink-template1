@@ -52,7 +52,7 @@
 
 @media (max-width: 480px) {
     .experience {
-        grid-template-columns: 1fr; // 1 колонка на очень маленьких экранах
+        grid-template-columns: repeat(2, 1fr); // 1 колонка на очень маленьких экранах
 
         &Item {
             &Image {

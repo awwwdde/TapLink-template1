@@ -2,14 +2,14 @@
 
 .main {
     width: 100%; // Занимает всю ширину страницы
-    min-height: 100vh; // Высота блока
+    min-height: calc(100vh - 30px); // Высота блока с учетом отступов
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; // Начинаем с самого верха
-    padding: 15px; // Отступы по бокам
+    justify-content: center; // Начинаем с самого верха
+    padding: 15px 15px; // Отступы сверху и снизу по 15px, по бокам 0
     overflow-y: auto; // Добавляем вертикальную прокрутку
-    background: $text-gradient;
+    background: $block-gradient;
     border-radius: 25px;
     margin: 0 auto; // Центрируем блок по горизонтали
     max-width: 700px; // Максимальная ширина блока
@@ -66,7 +66,7 @@
 // Медиа-запросы для мобильных устройств
 @media (max-width: 768px) {
     .main {
-        padding: 0 10px; // Уменьшаем отступы
+        padding: 15px 10px; // Уменьшаем отступы по бокам
 
         &-block {
             max-width: 100%; // Устанавливаем ширину блока на 100%
@@ -89,7 +89,7 @@
             &__contact {
                 &-list {
                     grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
-                    gap: 5px; // Отступ между элементами // 2 колонки на мобильных устройствах
+                    gap: 5px; // Отступ между элементами
                 }
             }
         }
@@ -98,6 +98,17 @@
 
 @media (max-width: 480px) {
     .main {
+        width: 100%; // Занимает всю ширину страницы
+        min-height: calc(100vh - 30px); // Высота блока с учетом отступов
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; // Начинаем с самого верха
+        padding: 15px 15px; // Отступы сверху и снизу по 15px, по бокам 0
+        overflow-y: auto; // Добавляем вертикальную прокрутку
+        background: $block-gradient;
+        border-radius: 25px;
+        margin: 0 auto; // Центрируем блок по горизонтали
         &-block {
             padding: 10px; // Добавляем отступы для маленьких экранов
 
