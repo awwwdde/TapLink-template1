@@ -2,7 +2,7 @@ import React from 'react';
 import './main.scss';
 import Footer from '../../components/footer/Footer';
 import Experience from '../../components/experience/Experience'; // Импортируем компонент Experience
-import Work from '../../components/work/Work';
+import Work from '../../components/work/Work'; // Импортируем компонент Work
 
 function Main() {
     const works = [
@@ -36,50 +36,45 @@ function Main() {
             date: '2022 - present',
             position: 'DevOps',
         },
-    ]
+        // Добавьте больше работ по мере необходимости
+    ];
+
     const experiences = [
         {
             title: 'Frontend',
             image: '', // Замените на URL вашего изображения
         },
         {
-            title: 'Backend',
+            title: 'Frontend',
             image: '', // Замените на URL вашего изображения
         },
         {
-            title: 'UI UX ',
+            title: 'Frontend',
             image: '', // Замените на URL вашего изображения
         },
         {
-            title: 'ThreeJS',
-            image: '', // Замените на URL вашего изображения
-        },
-        {
-            title: 'React',
+            title: 'Frontend',
             image: '', // Замените на URL вашего изображения
         },
         // Добавьте больше опыта по мере необходимости
     ];
-        const contacts = [
+
+    const contacts = [
         {
-            title: 'GitHub',
             icon: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg', // Иконка GitHub
             link: 'https://github.com/yourusername', // Замените на вашу ссылку
         },
         {
-            title: 'LinkedIn',
-            icon: 'https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg', // Иконка LinkedIn
+            icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Dribbble_icon.svg', // Иконка Dribbble
+            link: 'https://dribbble.com/yourusername', // Замените на вашу ссылку
+        },
+        {
+            icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Telegram_logo.svg', // Иконка Telegram
+            link: 'https://t.me/yourusername', // Замените на вашу ссылку
+        },
+        {
+            icon: 'https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg', // Иконка LinkedIn (если нужно)
             link: 'https://www.linkedin.com/in/yourusername/', // Замените на вашу ссылку
-        },
-        {
-            title: 'Twitter',
-            icon: 'https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_bird_logo_2012.svg', // Иконка Twitter
-            link: 'https://twitter.com/yourusername', // Замените на вашу ссылку
-        },
-        {
-            title: 'Facebook',
-            icon: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg', // Иконка Facebook
-            link: 'https://www.facebook.com/yourusername', // Замените на вашу ссылку
         },
         // Добавьте больше контактов по мере необходимости
     ];
@@ -103,8 +98,7 @@ function Main() {
                     <div className="main-block__contact-list">
                         {contacts.map((contact, index) => (
                             <a key={index} href={contact.link} target="_blank" rel="noopener noreferrer" className="main-block__contact-item">
-                                <img src={contact.icon} alt={contact.title} style={{ width: '30px', height: '30px', marginRight: '10px' }} />
-                                {contact.title}
+                                <img src={contact.icon} alt="Contact Icon" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                             </a>
                         ))}
                     </div>

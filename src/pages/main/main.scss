@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
+
 .main {
     max-width: 700px;
     min-height: 100vh;
@@ -13,36 +14,105 @@
     position: relative;
     background: $text-gradient;
     border-radius: 0 25px 25px 0;
+
     &-block {
         max-width: 500px;
         display: inline-block;
         flex-direction: column;
         align-items: center; 
-        &__title{
+
+        &__title {
             font-size: 48px;
             font-weight: 800;
         }
-        &__about{
+
+        &__about {
             font-size: 24px;
             text-align: justify;
-            &-text{
+
+            &-text {
                 font-size: 18px;
                 font-weight: 300;
             }
         }
-        &__exp{
+
+        &__exp {
             padding: 30px 0;
-            &-block{
+
+            &-block {
                 display: flex;
                 flex-direction: column;
             }
         }
-        &__work{
-            &-block{
+
+        &__work {
+            &-block {
                 display: flex;
                 flex-direction: column;
             }
         }
-        &__contact{}
+
+        &__contact {
+            &-list {
+                display: grid; // Используем grid для контейнера
+                grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
+                gap: 5px; // Отступ между элементами
+            }
+        }
+    }
+}
+
+// Медиа-запросы для мобильных устройств
+@media (max-width: 768px) {
+    .main {
+        padding: 0 10px; // Уменьшаем отступы
+
+        &-block {
+            max-width: 100%; // Устанавливаем ширину блока на 100%
+
+            &__title {
+                font-size: 36px; // Уменьшаем размер шрифта заголовка
+            }
+
+            &__about {
+                font-size: 20px; // Уменьшаем размер шрифта
+                &-text {
+                    font-size: 16px; // Уменьшаем размер шрифта текста
+                }
+            }
+
+            &__exp {
+                padding: 20px 0; // Уменьшаем отступы
+            }
+
+            &__contact {
+                &-list {
+                    grid-template-columns: repeat(4, 1fr); // 2 колонки на мобильных устройствах
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        &-block {
+            &__title {
+                font-size: 28px; // Уменьшаем размер шрифта заголовка для маленьких экранов
+            }
+
+            &__about {
+                font-size: 18px; // Уменьшаем размер шрифта
+                &-text {
+                    font-size: 14px; // Уменьшаем размер шрифта текста
+                }
+            }
+
+            &__contact {
+                &-list {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+        }
     }
 }
